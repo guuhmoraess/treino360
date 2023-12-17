@@ -6,7 +6,7 @@ const treinosControllers = require('../controllers/treinosControllers');
 const service = require ('../services/checkinServices')
 const checkinControllers = require ('../controllers/checkinControllers')
 
- // rotas de usuários
+ // rotas de usuárioss
 router.post ('/users',controllers.createUser)
 router.get ('/users', controllers.usersList)
 router.put ('/users/:_id', controllers.usersAtt)
