@@ -6,5 +6,5 @@ RUN npm install -g nodemon
 RUN rm -rf node_modules
 
 COPY . .
-EXPOSE 4000
+EXPOSE 3008
 CMD  ["npm", "run", "dev"]
