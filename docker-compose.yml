@@ -5,7 +5,7 @@ services:
     image: node:alpine
     working_dir: /app
     ports:
-      - "3006:3006"
+      - "4000:4000"
     volumes:
       - .:/app
     command: npm run dev
