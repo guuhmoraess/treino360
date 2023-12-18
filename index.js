@@ -2,7 +2,7 @@ const express = require ('express')
 const connectDatabase = require ('./dataBase')
 const rotas = require ('./rotas')
 const app = express ()
-const port = 3005
+const port = 3006
 app.use (express.json())
 connectDatabase ()
 app.use(rotas)
