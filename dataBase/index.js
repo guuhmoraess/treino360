@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const app = require('express')(); // Exemplo de importação do Express
 
-const connectDatabase = async () => {
+const connectDatabase = async (app) => {
     try {
         console.log('Espere estamos conectando');
 
