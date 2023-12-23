@@ -1,23 +1,16 @@
 const mongoose = require('mongoose');
-const app = require('express')(); // Exemplo de importação do Express
 
-const connectDatabase = async (app) => {
-    try {
-        console.log('Espere estamos conectando');
+const connectDatabase = () => {
 
-        await mongoose.connect("mongodb+srv://gustavo:eGKGOEPT4BOepzbQ@cluster0.1duey0r.mongodb.net/?retryWrites=true&w=majority", {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+    console.log("Espere estamos conectando")
 
-        console.log('Banco conectado');
-        // Inicialize o servidor aqui
-        app.listen(3008, () => {
-            console.log('Servidor rodando na porta 3008');
-        });
-    } catch (error) {
-        console.error('Erro ao conectar ao MongoDB:', error);
-    }
-};
+    mongoose.connect("mongodb+srv://gustavo:eGKGOEPT4BOepzbQ@cluster0.1duey0r.mongodb.net/?retryWrites=true&w=majority", { useNewurlparser: true, useUnifiedTopology: true })
 
-module.exports = connectDatabase;
+        .then(() => console.log("Banco conectado"))
+
+
+
+        .catch((error) => console.log(error))
+
+}
+module.exports = connectDatabase
